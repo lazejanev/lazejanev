@@ -12,7 +12,7 @@
 <!-- ===================== TYPING SUBTITLE ===================== -->
 <p align="center">
   <a href="https://www.linkedin.com/in/lazejanev/">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&center=true&vCenter=true&width=820&lines=Architecting+Digital+Marvels+with+Dynamics+365;Building+Autonomous+Finance+%26+Ops+Systems;X%2B%2B+%2B+MCP+%2B+AI+Agents+%2B+Modern+ALM;Turning+%22it+depends%22+into+shipped+solutions;It%27s+better+we+cannibalize+ourselves+than+wait+for+someone+else+to+do+it." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&center=true&vCenter=true&width=1100&lines=Architecting+Digital+Marvels+with+Dynamics+365;Building+Autonomous+Finance+%26+Ops+Systems;X%2B%2B+%2B+MCP+%2B+AI+Agents+%2B+Modern+ALM;Turning+%22it+depends%22+into+shipped+solutions;It%27s+better+we+cannibalize+ourselves+than+wait+for+someone+else+to+do+it." alt="Typing SVG" />
   </a>
 </p>
 
