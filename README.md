@@ -1,7 +1,6 @@
 <!--
   GitHub Profile README for lazejanev
   Place this file at:  https://github.com/lazejanev/lazejanev  ->  README.md
-  (Create a repo named exactly "lazejanev". GitHub renders its README on your profile.)
 -->
 
 <!-- ===================== HEADER BANNER ===================== -->
@@ -12,7 +11,7 @@
 <!-- ===================== TYPING SUBTITLE ===================== -->
 <p align="center">
   <a href="https://www.linkedin.com/in/lazejanev/">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&center=true&vCenter=true&width=1100&lines=Architecting+Digital+Marvels+with+Dynamics+365;Building+Autonomous+Finance+%26+Ops+Systems;X%2B%2B+%2B+MCP+%2B+AI+Agents+%2B+Modern+ALM;Turning+%22it+depends%22+into+shipped+solutions;It%27s+better+we+cannibalize+ourselves+than+wait+for+someone+else+to+do+it." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&center=true&vCenter=true&width=820&lines=Architecting+Digital+Marvels+with+Dynamics+365;Building+Autonomous+Finance+%26+Ops+Systems;X%2B%2B+%2B+MCP+%2B+AI+Agents+%2B+Modern+ALM;Turning+%22it+depends%22+into+shipped+solutions" alt="Typing SVG" />
   </a>
 </p>
 
@@ -61,8 +60,28 @@ current_status: "Teaching an agent to write next year's MVP post on time."
 ## What I am working on
 
 - **Autonomous ALM for X++** using MCP servers and orchestrated AI agents across the full development lifecycle.
-- **Tenant-wide automation** for Dynamics 365 first-party app updates, driven entirely from Azure DevOps.
+- **Tenant-wide automation** for Dynamics 365 first-party app updates, driven entirely from Azure DevOps ([d365-tenant-app-updater](https://github.com/lazejanev/d365-tenant-app-updater)).
 - **Community building**: DynamicsMinds Program Committee, co-organizer of DUG Adriatic in Skopje, speaker and mentor.
+
+---
+
+## Featured project
+
+### [d365-tenant-app-updater](https://github.com/lazejanev/d365-tenant-app-updater)
+
+<p align="left">
+  <a href="https://github.com/lazejanev/d365-tenant-app-updater"><img src="https://img.shields.io/badge/GitHub-d365--tenant--app--updater-0b3d91?style=for-the-badge&logo=github&logoColor=white" alt="Repo" /></a>
+  <img src="https://img.shields.io/badge/license-MIT-2ea44f?style=for-the-badge" alt="MIT" />
+  <img src="https://img.shields.io/badge/version-2.0.0-1e90ff?style=for-the-badge" alt="v2.0.0" />
+</p>
+
+Update every Dynamics 365 first-party app across a whole tenant, from one Azure DevOps pipeline. A service principal discovers every Dataverse environment, compares installed versus available versions, and installs only genuinely newer ones. It never downgrades, retries failed installs, protects environments you choose, and previews changes with a plan-only mode.
+
+- Reads available versions from the Power Platform App Management API and installed versions from Dataverse managed solutions.
+- Only three variables required to run; everything else is an optional override with a sensible default.
+- Handles apps that need the PPAC custom install wizard without failing the run.
+
+*Because tenant-wide app maintenance should not cost you an afternoon.*
 
 ---
 
