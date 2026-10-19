@@ -1,8 +1,3 @@
-<!--
-  GitHub Profile README for lazejanev
-  Place this file at:  https://github.com/lazejanev/lazejanev  ->  README.md
--->
-
 <!-- ===================== HEADER BANNER ===================== -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b3d91,100:1e90ff&height=210&section=header&text=Laze%20Janev&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Dynamics%20365%20Solution%20Architect%20%E2%86%92%20AI%20ERP%20%7C%204x%20Microsoft%20MVP%20%7C%20MCT&descAlignY=60&descSize=18" alt="Laze Janev banner" />
@@ -60,7 +55,7 @@ current_status: "Teaching an agent to write next year's MVP post on time."
 ## What I am working on
 
 - **Autonomous ALM for X++** using MCP servers and orchestrated AI agents across the full development lifecycle.
-- **Tenant-wide automation** for Dynamics 365 first-party app updates, driven entirely from Azure DevOps ([d365-tenant-app-updater](https://github.com/lazejanev/d365-tenant-app-updater)).
+- **Tenant-wide automation** for Dynamics 365 app and Finance and Operations updates, from Azure DevOps or GitHub Actions ([d365-tenant-app-updater](https://github.com/lazejanev/d365-tenant-app-updater)). v3 holds production back until non-production has proven a version.
 - **Community building**: DynamicsMinds Program Committee, co-organizer of DUG Adriatic in Skopje, speaker and mentor.
 
 ---
@@ -71,15 +66,20 @@ current_status: "Teaching an agent to write next year's MVP post on time."
 
 <p align="left">
   <a href="https://github.com/lazejanev/d365-tenant-app-updater"><img src="https://img.shields.io/badge/GitHub-d365--tenant--app--updater-0b3d91?style=for-the-badge&logo=github&logoColor=white" alt="Repo" /></a>
+  <a href="https://github.com/lazejanev/d365-tenant-app-updater/releases/latest"><img src="https://img.shields.io/github/v/release/lazejanev/d365-tenant-app-updater?style=for-the-badge&color=1e90ff&label=release" alt="Latest release" /></a>
+  <a href="https://github.com/lazejanev/d365-tenant-app-updater/stargazers"><img src="https://img.shields.io/github/stars/lazejanev/d365-tenant-app-updater?style=for-the-badge&color=111827" alt="Stars" /></a>
   <img src="https://img.shields.io/badge/license-MIT-2ea44f?style=for-the-badge" alt="MIT" />
-  <img src="https://img.shields.io/badge/version-2.0.0-1e90ff?style=for-the-badge" alt="v2.0.0" />
 </p>
 
-Update every Dynamics 365 first-party app across a whole tenant, from one Azure DevOps pipeline. A service principal discovers every Dataverse environment, compares installed versus available versions, and installs only genuinely newer ones. It never downgrades, retries failed installs, protects environments you choose, and previews changes with a plan-only mode.
+<a href="https://github.com/lazejanev/d365-tenant-app-updater"><img src="assets/d365-tenant-app-updater.png" alt="d365-tenant-app-updater: production waits for proof" width="640" /></a>
 
-- Reads available versions from the Power Platform App Management API and installed versions from Dataverse managed solutions.
-- Only three variables required to run; everything else is an optional override with a sensible default.
-- Handles apps that need the PPAC custom install wizard without failing the run.
+Keeps every Dynamics 365 app and Finance and Operations version current across a whole tenant, from Azure DevOps or GitHub Actions. Non-production updates as soon as Microsoft offers something new. Production only takes a version that a non-production environment already runs.
+
+- **Plan, then apply.** Plan reads the whole tenant and changes nothing. Apply re-checks every action against the live tenant and the current settings first.
+- **Never blind.** Installed versions come from Dataverse. It never downgrades and never installs an app that is not already there.
+- **Finance and Operations.** Quality updates on the current release, or the next release, with guards against jumping further than you asked.
+- **No secret needed.** OpenID Connect on GitHub, workload identity federation on Azure DevOps.
+- **Three values to start.** Everything else has a sensible default.
 
 *Because tenant-wide app maintenance should not cost you an afternoon.*
 
